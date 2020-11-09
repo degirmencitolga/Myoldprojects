@@ -1,0 +1,74 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(BenimUyg());
+}
+
+class BenimUyg extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(fontFamily: 'Courgette-Regular'),
+      home: Scaffold(
+        backgroundColor: Colors.grey[900],
+        body: SafeArea(
+            child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              CircleAvatar(
+                radius: 70.0,
+                backgroundImage: AssetImage('Assets/image/td.JPG'),
+              ),
+              Text('Tolga Değirmenci',
+                  style: TextStyle(fontSize: 25, color: Colors.white70)),
+              Text('Elektrik Elektronik Mühendisi',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white70,
+                  )),
+              Container(
+                width: 320,
+                child: Divider(
+                  height: 30,
+                  color: Colors.white,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(horizontal: 45.0),
+                color: Colors.grey[700],
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.white70,
+                  ),
+                  title: Text(
+                    'tolgadegirmenci34@gmail.com',
+                    style: TextStyle(color: Colors.white70, fontSize: 15),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(horizontal: 45.0),
+                color: Colors.grey[700],
+                child: ListTile(
+                  leading: Icon(
+                    Icons.call,
+                    color: Colors.white70,
+                  ),
+                  title: Text(
+                    '+90 xxx 790 xx 30',
+                    style: TextStyle(color: Colors.white70, fontSize: 18),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        )),
+      ),
+    );
+  }
+}
